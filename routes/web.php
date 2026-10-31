@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -17,3 +19,7 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('categories', CategoryController::Class);
+Route::resource('locations', LocationController::Class);
+Route::resource('products', ProductController::Class);
