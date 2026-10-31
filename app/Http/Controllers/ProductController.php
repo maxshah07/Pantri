@@ -32,7 +32,7 @@ class ProductController extends Controller
         $categories = Category::all();
         $locations = Location::all();
         $product = new Product();
-        return view('products.create', compact('product', 'locations', 'products'));
+        return view('products.create', compact('categories', 'locations', 'product'));
     }
 
     function store(Request $request) {
